@@ -6,7 +6,7 @@ import jakarta.persistence.*
 class ProjectDetail(
     var content: String,
     var url: String?,
-    var isActive: String
+    var isActive: Boolean
 ) : BaseEntity() {
 
     @Id
@@ -14,7 +14,7 @@ class ProjectDetail(
     @Column(name = "project_detail_id")
     var id: Long? = null
 
-    fun update(content: String, url: String?, isActive: String) {
+    fun update(content: String, url: String?, isActive: Boolean) {
         this.content = content
         this.url = url
         this.isActive = isActive
