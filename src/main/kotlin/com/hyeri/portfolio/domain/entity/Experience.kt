@@ -26,7 +26,7 @@ class Experience(
     @JoinColumn(name = "experience_id")
     var details: MutableList<ExperienceDetail> = mutableListOf()
 
-    fun getEndYearMont(): String {
+    fun getEndYearMonth(): String {
         if (endYear == null || endMonth == null) {
             return "Present"
         }
