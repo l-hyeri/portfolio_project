@@ -58,7 +58,7 @@ class DataInitializer(
         // link 초기화
         val links = mutableListOf<Link>(
             Link(name = "Github", content = "https://github.com/l-hyeri", isActive = true),
-            Link(name = "Velog", content = "https://velog.io/@gr_ace/posts", isActive = true),
+            Link(name = "Chat-left-quote-fill", content = "https://velog.io/@gr_ace/posts", isActive = true),
         )
         linkRepository.saveAll(links)
 
