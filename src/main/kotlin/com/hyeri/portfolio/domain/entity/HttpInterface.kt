@@ -26,6 +26,6 @@ class HttpInterface(
 
     var requestUri: String? = httpServletRequest.requestURI
 
-    var userAgent: String? = httpServletRequest.getHeader("userAgent")
+    var userAgent: String? = httpServletRequest.getHeader("user-agent")
 
 }
