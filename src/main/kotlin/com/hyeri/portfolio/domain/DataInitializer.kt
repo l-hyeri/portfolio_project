@@ -149,9 +149,9 @@ class DataInitializer(
         )
         project2.skills.addAll(
             mutableListOf(
-                ProjectSkill(project = project1, skill = java),
-                ProjectSkill(project = project1, skill = spring),
-                ProjectSkill(project = project1, skill = mysql)
+                ProjectSkill(project = project2, skill = java),
+                ProjectSkill(project = project2, skill = spring),
+                ProjectSkill(project = project2, skill = mysql)
             )
         )
         projectRepository.saveAll(mutableListOf(project1, project2))
