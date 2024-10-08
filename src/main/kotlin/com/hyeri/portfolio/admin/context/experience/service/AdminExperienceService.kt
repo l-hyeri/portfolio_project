@@ -8,7 +8,7 @@ import com.hyeri.portfolio.domain.repository.ExperienceRepository
 import org.springframework.stereotype.Service
 
 @Service
-class AdminExperienceService(   // experience 테이브 조회하기, experience detail 테이블 조회하기 2가지 기능 가짐ㄴ
+class AdminExperienceService(
     private val experienceRepository: ExperienceRepository
 ) {
 
