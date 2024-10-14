@@ -1,4 +1,4 @@
-package com.hyeri.portfolio.admin.context.introduction
+package com.hyeri.portfolio.admin.context.introduction.form
 
 import com.hyeri.portfolio.domain.entity.Introduction
 import jakarta.validation.constraints.NotBlank
