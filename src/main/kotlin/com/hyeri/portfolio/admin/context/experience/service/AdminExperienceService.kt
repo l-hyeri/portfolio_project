@@ -34,11 +34,11 @@ class AdminExperienceService(
 
     @Transactional
     fun save(form: ExperienceForm) {
-        val experienceDetail = form.details
+        val experienceDetails = form.details
             ?.map { detail -> detail.toEntity() }
             ?.toMutableList()
         val experience = form.toEntity()
-        experience.addDetails(experienceDetail)
+        experience.addDetails(experienceDetails)
 
         experienceRepository.save(experience)
     }
