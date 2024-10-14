@@ -17,7 +17,7 @@ class AdminProjectViewController(
     @GetMapping
     fun project(model: Model): String {
 
-        val elements = listOf<FormElementDTO>(
+        val formElements = listOf<FormElementDTO>(
             TextFormElementDTO("name", 4),
             TextFormElementDTO("description", 8),
             SelectFormElementDTO("startYear", 3, (2010..2030).toList()),
@@ -26,7 +26,7 @@ class AdminProjectViewController(
             SelectFormElementDTO("endMonth", 2, (1..12).toList()),
             SelectFormElementDTO("isActive", 2, listOf(true.toString(), false.toString()))
         )
-        model.addAttribute("elements", elements)
+        model.addAttribute("formElements", formElements)
 
         val detailElements = listOf<FormElementDTO>(
             TextFormElementDTO("content", 4),

@@ -18,11 +18,11 @@ class AdminProjectSkillViewController(
         val projectList = adminProjectSkillService.getProjectList()
         val skillList = adminProjectSkillService.getSkillList()
 
-        val elements = listOf<FormElementDTO>(
+        val formElements = listOf<FormElementDTO>(
             SelectFormElementDTO("project", 8, projectList),
             SelectFormElementDTO("skill", 4, skillList),
         )
-        model.addAttribute("elements", elements)
+        model.addAttribute("formElements", formElements)
 
         val table = adminProjectSkillService.getProjectSkillTable()
         model.addAttribute("table", table)

@@ -1,6 +1,6 @@
 package com.hyeri.portfolio.admin.context.introduction.controller
 
-import com.hyeri.portfolio.admin.context.introduction.IntroductionForm
+import com.hyeri.portfolio.admin.context.introduction.form.IntroductionForm
 import com.hyeri.portfolio.admin.context.introduction.service.AdminIntroductionService
 import com.hyeri.portfolio.admin.data.ApiResponse
 import org.springframework.http.ResponseEntity

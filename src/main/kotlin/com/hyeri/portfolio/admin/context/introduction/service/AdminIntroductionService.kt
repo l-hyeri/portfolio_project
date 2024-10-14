@@ -1,6 +1,6 @@
 package com.hyeri.portfolio.admin.context.introduction.service
 
-import com.hyeri.portfolio.admin.context.introduction.IntroductionForm
+import com.hyeri.portfolio.admin.context.introduction.form.IntroductionForm
 import com.hyeri.portfolio.admin.data.TableDTO
 import com.hyeri.portfolio.domain.entity.Introduction
 import com.hyeri.portfolio.domain.repository.IntroductionRepository
