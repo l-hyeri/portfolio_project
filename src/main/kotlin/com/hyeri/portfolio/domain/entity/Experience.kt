@@ -4,13 +4,13 @@ import jakarta.persistence.*
 
 @Entity
 class Experience(
-    var title: String,
-    var description: String,
-    var startYear: Int,
-    var startMonth: Int,
-    var endYear: Int?,
-    var endMonth: Int?,
-    var isActive: Boolean
+    title: String,
+    description: String,
+    startYear: Int,
+    startMonth: Int,
+    endYear: Int?,
+    endMonth: Int?,
+    isActive: Boolean
 ) : BaseEntity() {
 
     @Id
@@ -18,11 +18,21 @@ class Experience(
     @Column(name = "experience_id")
     var id: Long? = null
 
-    @OneToMany(
-        targetEntity = ExperienceDetail::class,
-        fetch = FetchType.LAZY,
-        cascade = [CascadeType.ALL]
-    )
+    var title: String = title
+
+    var description: String = description
+
+    var startYear: Int = startYear
+
+    var startMonth: Int = startMonth
+
+    var endYear: Int? = endYear
+
+    var endMonth: Int? = endMonth
+
+    var isActive: Boolean = isActive
+
+    @OneToMany(targetEntity = ExperienceDetail::class, fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
     @JoinColumn(name = "experience_id")
     var details: MutableList<ExperienceDetail> = mutableListOf()
 
@@ -30,13 +40,11 @@ class Experience(
         if (endYear == null || endMonth == null) {
             return "Present"
         }
-        return "${endYear}.${endMonth}" // 2024.09 형식처럼 return 됨.
+
+        return "${endYear}.${endMonth}"
     }
 
-    fun update(
-        title: String, description: String, startYear: Int,
-        startMonth: Int, endYear: Int?, endMonth: Int?, isActive: Boolean
-    ) {
+    fun update(title: String, description: String, startYear: Int, startMonth: Int, endYear: Int?, endMonth: Int?, isActive: Boolean) {
         this.title = title
         this.description = description
         this.startYear = startYear

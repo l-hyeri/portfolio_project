@@ -14,7 +14,7 @@ class ProjectDTO(
         name = project.name,
         description = project.description,
         startYearMonth = "${project.startYear}.${project.startMonth}",
-        endYearMonth = project.getEndYearMont(),
+        endYearMonth = project.getEndYearMonth(),
         details = project.details.filter { it.isActive }.map { ProjectDetailDTO((it)) },    // 활성화 상태인 detila 데이터만 가져옴.
         skills = project.skills.map { it.skill }.filter { it.isActive }.map { SkillDTO(it) }
     )
