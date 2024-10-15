@@ -17,7 +17,7 @@ class PresentationApiController(
 
     @GetMapping("/v1/introductions")
     fun getIntroductions(): List<IntroductionDTO> {
-        return presentationService.getIntroudctions()
+        return presentationService.getIntroductions()
     }
 
     @GetMapping("/v1/links")

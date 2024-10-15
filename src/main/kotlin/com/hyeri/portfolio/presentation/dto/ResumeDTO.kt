@@ -16,7 +16,7 @@ class ResumeDTO(
             description = experience.description,
             startYearMonth = "${experience.startYear}.${experience.startMonth}",
             endYearMonth = experience.getEndYearMonth(),
-            details = experience.details.map { detail -> detail.content }
+            details = experience.details.filter{detail->detail.isActive}.map { detail -> detail.content }
         )
     }
     var achievements: List<AchievementDTO> = achievements.map { achievement ->

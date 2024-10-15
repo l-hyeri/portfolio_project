@@ -14,7 +14,7 @@ class PresentationViewController(
     @GetMapping("/")
     fun index(model: Model): String {
 
-        val introductions = presentationService.getIntroudctions()
+        val introductions = presentationService.getIntroductions()
         model.addAttribute("introductions", introductions)
 
         val links = presentationService.getLinks()
