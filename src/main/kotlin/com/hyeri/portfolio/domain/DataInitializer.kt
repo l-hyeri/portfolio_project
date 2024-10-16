@@ -18,7 +18,8 @@ class DataInitializer(
     private val linkRepository: LinkRepository,
     private val skillRepository: SkillRepository,
     private val projectRepository: ProjectRepository,
-    private val experienceRepository: ExperienceRepository
+    private val experienceRepository: ExperienceRepository,
+    private val accountRepository: AccountRepository
 ) {
 
     val log: Logger = LoggerFactory.getLogger(DataInitializer::class.java)
@@ -144,7 +145,11 @@ class DataInitializer(
                 ProjectDetail(
                     content = "JPA 사용", url = null, isActive = true
                 ),
-                ProjectDetail(content = "Github Repository", url = "https://github.com/l-hyeri/RentalTech", isActive = true)
+                ProjectDetail(
+                    content = "Github Repository",
+                    url = "https://github.com/l-hyeri/RentalTech",
+                    isActive = true
+                )
             )
         )
         project2.skills.addAll(
@@ -156,5 +161,10 @@ class DataInitializer(
         )
         projectRepository.saveAll(mutableListOf(project1, project2))
 
+        val account = Account(
+            loginId = "admin1",
+            pw = "\$2a\$10\$rYEo9MwK5ke.F0Zy5/B5jehohkXeNl4FUmwOTzNQFRhVMzzg3ukuu"
+        )
+        accountRepository.save(account)
     }
 }
