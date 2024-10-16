@@ -39,7 +39,7 @@ class PresentationServiceTest {
             .thenReturn(activeIntroductions)
 
         // when
-        val introductionsDTOs = presentationService.getIntroudctions()
+        val introductionsDTOs = presentationService.getIntroductions()
 
         // then
         assertThat(introductionsDTOs).hasSize(DATA_SIZE / 2)
