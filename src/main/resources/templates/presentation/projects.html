@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{/presentation/layouts/layout-main :: layout(~{::#content})}">
+      th:replace="~{presentation/layouts/layout-main :: layout(~{::#content})}">
 <main class="flex-shrink-0" id="content">
     <!-- Projects Section-->
     <section class="py-5">
@@ -12,7 +12,7 @@
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <!-- Project Cards-->
                     <th:block th:each="project : ${projects}">
-                        <div th:replace="~{/presentation/fragments/fragment-card-project :: card(${project})}">
+                        <div th:replace="~{presentation/fragments/fragment-card-project :: card(${project})}">
                         </div>
                     </th:block>
                 </div>

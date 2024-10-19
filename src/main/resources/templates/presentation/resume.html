@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{/presentation/layouts/layout-main :: layout(~{::#content})}">
+      th:replace="~{presentation/layouts/layout-main :: layout(~{::#content})}">
 <main class="flex-shrink-0" id="content">
     <!-- Page Content-->
     <div class="container px-5 my-5">
@@ -23,7 +23,7 @@
                     </div>
                     <!-- Experience Cards-->
                     <th:block th:each="experience : ${resume.experiences}">
-                        <div th:replace="~{/presentation/fragments/fragment-card-experience :: card(${experience})}"></div>
+                        <div th:replace="~{presentation/fragments/fragment-card-experience :: card(${experience})}"></div>
                     </th:block>
                 </section>
 
@@ -32,7 +32,7 @@
                     <h2 class="text-secondary fw-bolder mb-4">Achievement</h2>
                     <!-- Achievement Cards -->
                     <th:block th:each="achievement : ${resume.achievements}">
-                        <div th:replace="~{/presentation/fragments/fragment-card-achievement ::card(${achievement}) }"></div>
+                        <div th:replace="~{presentation/fragments/fragment-card-achievement ::card(${achievement}) }"></div>
                     </th:block>
                 </section>
 
@@ -45,7 +45,7 @@
                         <div class="card-body p-5">
                             <!-- Skills list-->
                             <th:block th:each="skillType: ${skillType}">
-                                <div th:replace="~{/presentation/fragments/fragment-list-skill :: list(${resume.skills},${skillType.name()}) }"></div>
+                                <div th:replace="~{presentation/fragments/fragment-list-skill :: list(${resume.skills},${skillType.name()}) }"></div>
                             </th:block>
                         </div>
                     </div>
