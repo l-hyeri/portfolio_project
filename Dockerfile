@@ -1,6 +1,6 @@
 FROM openjdk:17
 
-LABEL maintainer="personal.hyeri@gmail.com"
+LABEL maintainer="hyeri6318@gmail.com"
 
 VOLUME /tmp
 
